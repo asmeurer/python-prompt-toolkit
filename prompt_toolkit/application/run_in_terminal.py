@@ -68,7 +68,6 @@ def run_coroutine_in_terminal(async_func, render_cli_done=False):
 
     if app is None:
         return ensure_future(async_func())
-    assert app._is_running
 
     # When a previous `run_in_terminal` call was in progress. Wait for that
     # to finish, before starting this one. Chain to previous call.
